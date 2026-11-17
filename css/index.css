@@ -1,0 +1,44 @@
+*{
+    box-sizing:border-box
+}
+html{
+    scroll-behavior:smooth
+}
+body{
+    margin:0;
+    background:#f8f2e7;
+    color:#173b1b;
+    font-family:Arial,Helvetica,sans-serif
+}
+.site-shell{
+    width:min(100%,1180px);
+    margin:auto;
+    min-height:100vh;
+    padding-bottom:24px
+}
+.topbar{
+    height:94px;
+    display:grid;
+    grid-template-columns:70px 1fr 70px;
+    align-items:center;
+    padding:0 28px
+}
+.icon-button,.theme-button{
+    border:0;
+    background:transparent;
+    color:#2f651f;
+    cursor:pointer
+}
+.menu-toggle{
+    font-size:28px
+}
+.theme-button{
+    justify-self:end;
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    background:#ebe1cc;
+    color:#ebe1cc;
+    box-shadow:0 2px 8px #d9cdb9
+}
+.brand{display:flex;align-items:center;justify-content:center;gap:13px;color:#205b28;text-decoration:none}.brand-mark{font-size:38px}.brand strong{display:block;font:700 34px Georgia,serif;letter-spacing:-1px}.brand small{display:block;text-align:center;letter-spacing:3px;font-size:9px;margin-top:2px}.welcome-card{margin:0 28px;background:#22551e;min-height:285px;border-radius:26px;position:relative;overflow:hidden;display:flex;align-items:center;padding:42px;color:#fff;box-shadow:0 12px 25px #cfc6b5}.welcome-card:before{content:"";position:absolute;width:290px;height:290px;border:1px solid rgba(255,255,255,.12);border-radius:50%;left:-125px;bottom:-140px}.welcome-copy{position:relative;z-index:1}.welcome-copy h1{font-size:42px;line-height:1.1;margin:0 0 18px}.welcome-copy h1 b{font-size:29px}.welcome-copy p{font-size:18px;line-height:1.5;margin:0;font-weight:600}.hero-art{margin-left:auto;font-size:105px;opacity:.55;transform:rotate(-12deg)}main{padding-bottom:15px}.section-block{margin:30px 28px 0}.section-heading{display:flex;align-items:center;gap:8px;margin-bottom:8px}.section-heading>span{font-size:22px}.section-heading h2{font-size:18px;margin:0;color:#215a25}.progress-title{justify-content:space-between}.progress-title a,.text-button{color:#215a25;text-decoration:none;font-weight:700;background:none;border:0;cursor:pointer}.progress-title h2{margin-right:auto}.quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.quick-card{min-height:170px;border-radius:20px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-decoration:none;color:#fff;box-shadow:0 8px 15px #d9d0c0;transition:.2s}.quick-card:hover{transform:translateY(-4px)}.quick-card span{width:70px;height:70px;border-radius:50%;background:#f8f6ee;display:grid;place-items:center;font-size:34px;margin-bottom:10px}.quick-card strong{font-size:19px}.green{background:#6c8e39}.gold{background:#e6a820}.orange{background:#c75a25}.sand{background:#c69d5d}.progress-card,.word-day-card{background:#fffdf9;border-radius:22px;min-height:145px;box-shadow:0 7px 18px #e2d9c9;display:flex;align-items:center;padding:24px 32px;gap:30px}.progress-ring{width:125px;height:125px;border-radius:50%;background:conic-gradient(#205a26 0 60%,#e6e0d4 60%);display:grid;place-items:center;flex:none}.progress-ring>div{width:96px;height:96px;border-radius:50%;background:#fffdf9;display:flex;flex-direction:column;align-items:center;justify-content:center}.progress-ring strong{font-size:27px}.progress-ring small{font-size:10px}.progress-copy h3{font-size:22px;margin:0 0 6px}.progress-copy p{margin:0;color:#332c27}.progress-plant{margin-left:auto;font-size:70px}.word-title-row{display:flex;align-items:center;gap:10px}.word-day-card{justify-content:space-between}.word-day-card h2{font:48px Georgia,serif;margin:0 0 2px}.word-day-card>div:first-child>strong{font-size:18px}.mini-audio,.word-audio,.sound-button{border:0;cursor:pointer;background:#efe6d0;border-radius:50%;width:44px;height:44px}.accent-line{width:43px;height:3px;background:#22551e;margin:8px 0}.word-day-card p{margin:0;color:#4d4944}.word-art{font-size:70px}footer{text-align:center;color:#6d665d;font-size:12px;margin-top:30px}.drawer{position:fixed;z-index:20;top:0;left:-320px;width:300px;height:100vh;background:#fffdf9;box-shadow:10px 0 30px rgba(0,0,0,.15);padding:24px;transition:left .25s}.drawer.open{left:0}.drawer-head{display:flex;justify-content:space-between;font:22px Georgia,serif}.drawer-close{border:0;background:none;font-size:30px}.drawer nav{display:grid;gap:8px;margin-top:30px}.drawer nav a{padding:15px;border-radius:12px;color:#244e25;text-decoration:none}.drawer nav a:hover,.drawer nav a.active{background:#edf0dc}.drawer-backdrop{display:none;position:fixed;inset:0;background:#0006;z-index:19}.drawer-backdrop.open{display:block}@media(max-width:760px){.topbar{grid-template-columns:50px 1fr 50px;padding:0 12px;height:76px}.brand strong{font-size:25px}.brand small{font-size:7px;letter-spacing:2px}.brand-mark{font-size:29px}.welcome-card{margin:0 14px;min-height:260px;padding:30px 25px}.hero-art{font-size:70px}.welcome-copy h1{font-size:34px}.welcome-copy h1 b{font-size:24px}.section-block{margin-left:14px;margin-right:14px}.quick-grid{grid-template-columns:repeat(2,1fr)}.quick-card{min-height:150px}.progress-card,.word-day-card{padding:18px;gap:14px}.progress-ring{width:100px;height:100px}.progress-ring>div{width:76px;height:76px}.progress-plant{display:none}.word-day-card h2{font-size:39px}.word-art{font-size:50px}}

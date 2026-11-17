@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Bésiro | Cultura</title>
+  <link rel="stylesheet" href="css/cultura.css">
+  <script src="js/cultura.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="culture-header light-header">
+      <button class="back-button" id="backButton" type="button" aria-label="Volver al inicio">←</button>
+      <div class="header-copy"><h1>Cultura <span>🧺</span></h1><p>Conoce nuestras raíces, tradiciones<br>y todo lo que nos hace bésiro.</p></div>
+      <div class="header-art" aria-hidden="true">🌿🦜</div>
+    </header>
+
+    <main class="content">
+      <section class="search-row">
+        <div class="search-wrap"><label for="cultureSearch">Buscar tema cultural</label><input id="cultureSearch" type="search" placeholder="Buscar temas culturales..." autocomplete="off"></div>
+        <button class="filter-button" id="cultureFilterButton" type="button">⚱️ Filtrar</button>
+      </section>
+      <!--
+      <section>
+        <div class="section-title-row"><div><span>🌿</span><div><h2>Explora la cultura bésiro</h2><p>Descubre diferentes aspectos de nuestra identidad.</p></div></div><button class="text-button" id="showAllCulture" type="button">Ver todos ›</button></div>
+        <div class="category-strip culture-categories">
+          <button class="category-card" type="button" data-culture-category="Sabiduría ancestral"><span>🎭</span><strong>Sabiduría ancestral</strong><small>18 temas</small></button>
+          <button class="category-card" type="button" data-culture-category="Artes y oficios"><span>🏹</span><strong>Artes y oficios</strong><small>16 temas</small></button>
+          <button class="category-card" type="button" data-culture-category="Música y danza"><span>🥁</span><strong>Música y danza</strong><small>15 temas</small></button>
+          <button class="category-card" type="button" data-culture-category="Historia y misiones"><span>⛪</span><strong>Historia y misiones</strong><small>20 temas</small></button>
+        </div>
+      </section>
+    -->
+      <section class="culture-section">
+        <div class="section-title-row"><div><span>☀️</span><div><h2>Sabiduría y tradición</h2><p>Aprende de nuestros abuelos y su conocimiento.</p></div></div><button class="text-button" id="showAllTradition" type="button">Ver todos ›</button></div>
+        <div class="culture-card-grid" id="cultureGrid" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+          <article class="culture-card" data-category="Sabiduría ancestral" data-search="misiones jesuiticas">
+            <video class="culture-thumb" controls preload="metadata" playsinline aria-label="Video: Consejos del abuelo" style="display:block;width:100%;height:245px;object-fit:cover;background:#000">
+              <source src="videos/SanJose.mp4" type="video/mp4">
+              Tu navegador no puede reproducir este video.
+            </video>
+            <h3>Misiones Jesuiticas</h3><p>Historia de las misiones jesuiticas.</p>
+          </article>
+                    <article class="culture-card" data-category="Sabiduría ancestral" data-search="tradicion">
+            <video class="culture-thumb" controls preload="metadata" playsinline aria-label="Video: Tradicion" style="display:block;width:100%;height:245px;object-fit:cover;background:#000">
+              <source src="videos/Tradicion.mp4" type="video/mp4">
+              Tu navegador no puede reproducir este video.
+            </video>
+            <h3>Tradicion</h3><p>San Jose Chiquitos tierra de historia y tradición.</p>
+          </article>
+                    <article class="culture-card" data-category="Sabiduría ancestral" data-search="musica">
+            <video class="culture-thumb" controls preload="metadata" playsinline aria-label="Video: Consejos del abuelo" style="display:block;width:100%;height:245px;object-fit:cover;background:#000">
+              <source src="videos/Musica.mp4" type="video/mp4">
+              Tu navegador no puede reproducir este video.
+            </video>
+            <h3>Musica</h3><p>Musica Chiquitana.</p>
+          </article>
+                    <article class="culture-card" data-category="Sabiduría ancestral" data-search="himno nacional">
+            <video class="culture-thumb" controls preload="metadata" playsinline aria-label="Video: Consejos del abuelo" style="display:block;width:100%;height:245px;object-fit:cover;background:#000">
+              <source src="videos/Himno.mp4" type="video/mp4">
+              Tu navegador no puede reproducir este video.
+            </video>
+            <h3>Himno Nacional de Bolivia</h3><p>Nuestro Himno Nacional en Besiro.</p>
+          </article>
+
+      <aside class="tip-card"><span>💡</span><div><h3>Consejo</h3><p>Conoce tu cultura, valora tus raíces y compártelas con orgullo. ¡Así nuestra identidad seguirá viva!</p></div><span>🌿</span></aside>
+    </main>
+  </div>
+</body>
+</html>

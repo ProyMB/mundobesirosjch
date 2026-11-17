@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Bésiro | Frases</title>
+  <link rel="stylesheet" href="css/frases.css">
+  <script src="js/frases.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="culture-header green-header">
+      <button class="back-button" id="backButton" type="button" aria-label="Volver al inicio">←</button>
+      <div class="header-copy"><h1>Frases <span>💬</span></h1><p>Expresa, comparte y conserva<br>nuestra lengua.</p></div>
+      <div class="header-art" aria-hidden="true">😸🙂‍↔️</div>
+    </header>
+    <main class="content">
+      <section class="popular-heading">
+        <div><span>🌿</span><div><h2>Frases populares</h2><p>Usa estas frases en tu día a día.</p></div></div>
+        <button class="listen-all" id="listenAll" type="button">🎧 Escuchar todas</button>
+      </section>
+      <div class="search-wrap">
+        <label for="phraseSearch">Buscar frases</label>
+        <input id="phraseSearch" type="search" placeholder="Busca una frase en bésiro..." autocomplete="off">
+      </div>
+      <section class="phrase-list" id="phraseList">
+        <article class="phrase-card" data-search="jasch hola saludo">
+          <div class="phrase-icon">👋</div><div class="phrase-text"><h3>¡Xaume!</h3><p>¡Buenos dias!</p></div>
+          <button class="sound-button" type="button" data-audio="audios/frases/XAUME.mp3" aria-label="Escuchar ¡Xaume!">🔊</button><button class="bookmark" type="button" aria-label="Guardar frase">♡</button>
+        </article>
+        <article class="phrase-card" data-search="¿untubapae aemo? ¿cómo estas?">
+          <div class="phrase-icon">🙋🏼‍♂️</div><div class="phrase-text"><h3>¿Untubapae Aemo?</h3><p>¿Cómo estás?</p></div>
+          <button class="sound-button" type="button" data-audio="audios/frases/COMO ESTAS.mp3" aria-label="Escuchar Untubapae Aemo">🔊</button><button class="bookmark" type="button" aria-label="Guardar frase">♡</button>
+        </article>
+        <article class="phrase-card" data-search="isiatai, uxia estoy bien">
+          <div class="phrase-icon">🤗</div><div class="phrase-text"><h3>Isiatai, Uxia</h3><p>Estoy bien</p></div>
+          <button class="sound-button" type="button" data-audio="audios/frases/ESTOY BIEN.mp3" aria-label="Escuchar Isiatai, Uxia">🔊</button><button class="bookmark" type="button" aria-label="Guardar frase">♡</button>
+        </article>
+        <article class="phrase-card" data-search="¿isané níri? ¿cómo te llamas?">
+          <div class="phrase-icon">⁉️</div><div class="phrase-text"><h3>¿Isané Níri?</h3><p>Cómo te llamas?</p></div>
+          <button class="sound-button" type="button" data-audio="audios/frases/ISANE NIRI.mp3" aria-label="Escuchar ISANE NIRI ">🔊</button><button class="bookmark" type="button" aria-label="Guardar frase">♡</button>
+        </article>
+        <article class="phrase-card" data-search="¿kauta aikati? ¿dónde vas?">
+          <div class="phrase-icon">🚶🏼‍♀️</div><div class="phrase-text"><h3>¿kauta Aikati?</h3><p>¿Dónde vas?</p></div>
+          <button class="sound-button" type="button" data-audio="audios/frases/KAUTA AIKATI.mp3" aria-label="Escuchar KAUTA AIKATI ">🔊</button><button class="bookmark" type="button" aria-label="Guardar frase">♡</button>
+        </article>
+        <article class="phrase-card" data-search="¿isané nachikoi? ¿qué estás haciendo?">
+          <div class="phrase-icon">👀</div><div class="phrase-text"><h3>¿Isané Nachikoi?</h3><p>¿Qué estás haciendo?</p></div>
+          <button class="sound-button" type="button" data-audio="audios/frases/ISANE NACHIKOI.mp3" aria-label="Escuchar Ámetauna">🔊</button><button class="bookmark" type="button" aria-label="Guardar frase">♡</button>
+        </article>
+           <article class="phrase-card" data-search="ñaunxokoka estoy enfermo">
+          <div class="phrase-icon">🤒</div><div class="phrase-text"><h3>Ñaunxokoka</h3><p>Estoy enfermo</p></div>
+          <button class="sound-button" type="button" data-audio="audios/frases/ÑAUNXOKOKA.mp3" aria-label="Escuchar ÑAUNXOKOKA">🔊</button><button class="bookmark" type="button" aria-label="Guardar frase">♡</button>
+        </article>
+           <article class="phrase-card" data-search="kuri upukínu vamos a la fiesta">
+          <div class="phrase-icon">🥳</div><div class="phrase-text"><h3>Kuri Upukínu</h3><p>Vamos a la fiesta</p></div>
+          <button class="sound-button" type="button" data-audio="audios/frases/KURI UPUKINU.mp3" aria-label="Escuchar KURI UPUKINU">🔊</button><button class="bookmark" type="button" aria-label="Guardar frase">♡</button>
+        </article>
+         <article class="phrase-card" data-search="isuchéka estoy triste">
+          <div class="phrase-icon">😞</div><div class="phrase-text"><h3>Isuchéka</h3><p>Estoy triste</p></div>
+          <button class="sound-button" type="button" data-audio="audios/frases/ISUCHEKA.mp3" aria-label="Escuchar ISUCHEKA">🔊</button><button class="bookmark" type="button" aria-label="Guardar frase">♡</button>
+        </article>
+        <article class="phrase-card" data-search="batácheyo estoy cansado">
+       <div class="phrase-icon">😣</div><div class="phrase-text"><h3>Batácheyo</h3><p>Estoy cansado</p></div>
+          <button class="sound-button" type="button" data-audio="audios/frases/BATACHEYO.mp3" aria-label="Escuchar BATACHEYO">🔊</button><button class="bookmark" type="button" aria-label="Guardar frase">♡</button>
+        </article>
+        <article class="phrase-card" data-search="chúxianpi estoy mal">
+        <div class="phrase-icon">🧑🏼‍💼</div><div class="phrase-text"><h3>Chúxianpi</h3><p>Estoy mal</p></div>
+          <button class="sound-button" type="button" data-audio="audios/frases/CHUXIANPI.mp3" aria-label="Escuchar CHUXIANPI">🔊</button><button class="bookmark" type="button" aria-label="Guardar frase">♡</button>
+        </article>
+        <article class="phrase-card" data-search="joo sí">
+          <div class="phrase-icon">👍🏼</div><div class="phrase-text"><h3>Joo</h3><p>Sí</p></div>
+          <button class="sound-button" type="button" data-audio="audios/frases/JOO.mp3" aria-label="Escuchar Joo">🔊</button><button class="bookmark" type="button" aria-label="Guardar frase">♡</button>
+        </article>
+        <article class="phrase-card" data-search="úxia bien">
+          <div class="phrase-icon">🌟</div><div class="phrase-text"><h3>¿Aukícheki?</h3><p>¿De dónde eres?</p></div>
+          <button class="sound-button" type="button" data-audio="audios/frases/AUKICHEKI.mp3" aria-label="Escuchar AUKICHEKI">🔊</button><button class="bookmark" type="button" aria-label="Guardar frase">♡</button>
+        </article>
+        <article class="phrase-card" data-search="tiboríxh enfadado">
+          <div class="phrase-icon">😠</div><div class="phrase-text"><h3>¿Isané Naka?</h3><p>¿Quién eres?</p></div>
+          <button class="sound-button" type="button" data-audio="audios/frases/ISANE NAKA.mp3" aria-label="Escuchar ISANE NAKA">🔊</button><button class="bookmark" type="button" aria-label="Guardar frase">♡</button>
+        </article>
+        <article class="phrase-card" data-search="kausané que pasó">
+          <div class="phrase-icon">🤷🏼‍♀️</div><div class="phrase-text"><h3>Chixhanúkapi</h3><p>Yo no quiero</p></div>
+          <button class="sound-button" type="button" data-audio="audios/frases/CHIXHANUKAPI.mp3" aria-label="Escuchar CHIXHANUKAPI">🔊</button><button class="bookmark" type="button" aria-label="Guardar frase">♡</button>
+        </article>
+      </section>
+      </section>
+      <p class="empty-state" id="phraseEmpty" hidden>No se encontraron frases.</p>
+      <aside class="tip-card"><span>🌿</span><div><h3>Consejo</h3><p>Practica estas frases todos los días y compartirlas mantiene viva nuestra voz.</p></div><span>🌿</span></aside>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Bésiro | Escucha</title>
+  <link rel="stylesheet" href="css/escucha.css">
+  <script src="js/escucha.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="culture-header light-header">
+      <button class="back-button" id="backButton" type="button" aria-label="Volver al inicio">←</button>
+      <div class="header-copy"><h1>Escucha <span>🎧</span></h1><p>Escucha nuestra lengua,<br>siéntela, repítela y hazla tuya.</p></div>
+      <div class="header-art" aria-hidden="true">🧏🏼🤗</div>
+    </header>
+
+    <main class="content">
+      <section class="search-row">
+        <div class="search-wrap"><label for="audioSearch">Buscar audio</label><input id="audioSearch" type="search" placeholder="Buscar audios en bésiro..." autocomplete="off"></div>
+        <button class="filter-button" id="audioFilterButton" type="button">⚱️ Filtrar</button>
+      </section>
+<!--
+      <section>
+        <div class="section-title-row"><div><span>🌿</span><div><h2>Escucha por tema</h2><p>Audios agrupados por temas para que aprendas mejor.</p></div></div><button class="text-button" type="button" id="showAllAudio">Ver todos ›</button></div>
+        <div class="category-strip audio-categories">
+          <button class="category-card" type="button" data-audio-category="Naturaleza"><span>🌿</span><strong>Naturaleza</strong><small>24 audios</small></button>
+          <button class="category-card" type="button" data-audio-category="Familia y hogar"><span>🏠</span><strong>Familia y hogar</strong><small>18 audios</small></button>
+          <button class="category-card" type="button" data-audio-category="Personas"><span>👥</span><strong>Personas</strong><small>16 audios</small></button>
+          <button class="category-card" type="button" data-audio-category="Cultura"><span>🧺</span><strong>Cultura</strong><small>22 audios</small></button>
+          <button class="category-card" type="button" data-audio-category="Alimentos"><span>🍲</span><strong>Alimentos</strong><small>18 audios</small></button>
+          <button class="category-card" type="button" data-audio-category="El tiempo"><span>🌞</span><strong>El tiempo</strong><small>12 audios</small></button>
+        </div>
+      </section>
+-->
+      <section class="audio-section">
+        <div class="section-title-row"><div><span>⭐</span><div><h2>Audios recomendados</h2><p>Escucha y repite estas palabras y frases.</p></div></div><button class="text-button" id="showAllRecommended" type="button">Ver todos ›</button></div>
+        <div class="audio-list" id="audioList">
+          <article class="audio-card" data-category="Naturaleza" data-search="ametaikéi silencio palabra">
+            <div class="audio-image">🤫</div><div class="audio-info"><h3>Ametaikéi</h3><p>Silencio</p><span>Frase</span></div><div class="waveform" aria-hidden="true">••••••••••••••••••</div><time>0:06</time><button class="play-btn" type="button" data-audio="audios/ametaikéi.mp3" aria-label="Reproducir Ametaikéi">▶</button><button class="bookmark" type="button" aria-label="Guardar audio">♡</button><button class="more" type="button" aria-label="Más opciones">⋮</button>
+          </article>
+          <article class="audio-card" data-category="Familia y hogar" data-search="bapáx guapa frase">
+            <div class="audio-image">😍</div><div class="audio-info"><h3>Bapáx</h3><p>Guapa</p><span>Frase</span></div><div class="waveform gold-wave" aria-hidden="true">••••••••••••••••••</div><time>0:09</time><button class="play-btn gold-play" type="button" data-audio="audios/bapáx.mp3" aria-label="Reproducir Bapáx">▶</button><button class="bookmark" type="button" aria-label="Guardar audio">♡</button><button class="more" type="button" aria-label="Más opciones">⋮</button>
+          </article>
+          <article class="audio-card" data-category="Personas" data-search="biakáx risa frase">
+            <div class="audio-image">😁</div><div class="audio-info"><h3>Biakáx</h3><p>
+            Risa</p><span>Frase</span></div><div class="waveform orange-wave" aria-hidden="true">••••••••••••••••••</div><time>0:07</time><button class="play-btn orange-play" type="button" data-audio="audios/biakáx.mp3" aria-label="Reproducir Biakáx">▶</button><button class="bookmark" type="button" aria-label="Guardar audio">♡</button><button class="more" type="button" aria-label="Más opciones">⋮</button>
+          </article>
+          <article class="audio-card" data-category="El tiempo" data-search="kuasirikix amar frase">
+            <div class="audio-image">💕</div><div class="audio-info"><h3>Kuasirikix</h3><p>Amar</p><span>Frase</span></div><div class="waveform" aria-hidden="true">••••••••••••••••••</div><time>0:08</time><button class="play-btn" type="button" data-audio="audios/kuasirikix.mp3" aria-label="Reproducir Kuasirikix">▶</button><button class="bookmark" type="button" aria-label="Guardar audio">♡</button><button class="more" type="button" aria-label="Más opciones">⋮</button>
+          </article>
+           <article class="audio-card" data-category="El tiempo" data-search="maxikiatáx flojo, perezoso frase">
+            <div class="audio-image">🥱</div><div class="audio-info"><h3>Maxikiatáx</h3><p>Flojo, perezoso</p><span>Frase</span></div><div class="waveform" aria-hidden="true">••••••••••••••••••</div><time>0:08</time><button class="play-btn" type="button" data-audio="audios/maxikiatáx.mp3" aria-label="Reproducir Maxikiatáx">▶</button><button class="bookmark" type="button" aria-label="Guardar audio">♡</button><button class="more" type="button" aria-label="Más opciones">⋮</button>
+          </article>
+          <article class="audio-card" data-category="El tiempo" data-search="nabariente alcohol frase">
+            <div class="audio-image">🍾</div><div class="audio-info"><h3>Nabariente</h3><p>Alcohol</p><span>Frase</span></div><div class="waveform" aria-hidden="true">••••••••••••••••••</div><time>0:08</time><button class="play-btn" type="button" data-audio="audios/nabariente.mp3" aria-label="Reproducir Nabariente">▶</button><button class="bookmark" type="button" aria-label="Guardar audio">♡</button><button class="more" type="button" aria-label="Más opciones">⋮</button>
+          </article>
+          <article class="audio-card" data-category="El tiempo" data-search="sarúki hermano/a frase">
+            <div class="audio-image">🧑🏻‍🤝‍🧑🏼</div><div class="audio-info"><h3>Sarúki</h3><p>Hermano/a</p><span>Frase</span></div><div class="waveform" aria-hidden="true">••••••••••••••••••</div><time>0:08</time><button class="play-btn" type="button" data-audio="audios/sarúki.mp3" aria-label="Reproducir Sarúki">▶</button><button class="bookmark" type="button" aria-label="Guardar audio">♡</button><button class="more" type="button" aria-label="Más opciones">⋮</button>
+          </article>
+          <article class="audio-card" data-category="El tiempo" data-search="tibibíx boda, casamiento frase">
+            <div class="audio-image">👰🏼</div><div class="audio-info"><h3>Tibibíx</h3><p>Boda, Casamiento</p><span>Frase</span></div><div class="waveform" aria-hidden="true">••••••••••••••••••</div><time>0:08</time><button class="play-btn" type="button" data-audio="audios/tibibíx.mp3" aria-label="Reproducir Tibibíx">▶</button><button class="bookmark" type="button" aria-label="Guardar audio">♡</button><button class="more" type="button" aria-label="Más opciones">⋮</button>
+          </article>
+          <article class="audio-card" data-category="El tiempo" data-search="itobi anochecer  frase">
+            <div class="audio-image">🌃</div><div class="audio-info"><h3>Itobi</h3><p>Anochecer</p><span>Frase</span></div><div class="waveform" aria-hidden="true">••••••••••••••••••</div><time>0:08</time><button class="play-btn" type="button" data-audio="audios/itobi.mp3" aria-label="Reproducir Itobi">▶</button><button class="bookmark" type="button" aria-label="Guardar audio">♡</button><button class="more" type="button" aria-label="Más opciones">⋮</button>
+          </article>
+          <article class="audio-card" data-category="El tiempo" data-search="tosibíxh grito frase">
+            <div class="audio-image">🗣️</div><div class="audio-info"><h3>Tosibíxh</h3><p>Grito</p><span>Frase</span></div><div class="waveform" aria-hidden="true">••••••••••••••••••</div><time>0:08</time><button class="play-btn" type="button" data-audio="audios/tosibíxh.mp3" aria-label="Reproducir Tosibíxh">▶</button><button class="bookmark" type="button" aria-label="Guardar audio">♡</button><button class="more" type="button" aria-label="Más opciones">⋮</button>
+          </article>
+        </div>
+        <p class="empty-state" id="audioEmpty" hidden>No se encontraron audios.</p>
+        <p class="audio-status" id="audioStatus" role="status" aria-live="polite"></p>
+      </section>
+
+      <aside class="tip-card"><span>🎧</span><div><h3>Consejo</h3><p>Escucha cada audio varias veces, repite en voz alta y verás cómo mejorarás cada día.</p></div><span>🌿</span></aside>
+    </main>
+  </div>
+</body>
+</html>

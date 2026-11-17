@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mundo Bésiro: aplicación educativa para aprender, escuchar y valorar la lengua y cultura Bésiro.">
+  <title>Mundo Bésiro | Inicio</title>
+  <link rel="stylesheet" href="css/index.css">
+  <script src="js/index.js" defer></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <button class="icon-button menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <a class="brand" href="index.html" aria-label="Mundo Bésiro, inicio">
+        <span class="brand-mark" aria-hidden="true">🌿</span>
+        <span><strong>Mundo Bésiro</strong><small>NUESTRA VOZ, NUESTRA TIERRA</small></span>
+      </a>
+      <!-- <button class="theme-button" id="themeToggle" type="button" aria-label="Cambiar apariencia">●</button> -->
+    </header>
+
+    <aside class="drawer" id="drawer" aria-hidden="true">
+      <div class="drawer-head"><strong>Mundo Bésiro</strong><button id="closeDrawer" class="drawer-close" type="button" aria-label="Cerrar menú">×</button></div>
+      <nav>
+        <a class="active" href="index.html">🏠 Inicio</a>
+        <a href="frases.html">💬 Frases</a>
+        <a href="palabras.html">📖 Palabras</a>
+        <a href="escucha.html">🎧 Escucha</a>
+        <a href="cultura.html">🎧 Escucha</a>
+      </nav>
+    </aside>
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+    <main>
+      <section class="welcome-card">
+        <div class="welcome-copy">
+          <h1>Jasch! <span>🌞</span><br><b>¡Bienvenido!</b></h1>
+          <p>Aprende, escucha<br>y comparte el Bésiro.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true"><span>🌿</span></div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-heading"><span>🌱</span><h2>¿Qué quieres aprender hoy?</h2></div>
+        <div class="quick-grid">
+          <a class="quick-card green" href="frases.html"><span>💬</span><strong>Frases</strong></a>
+          <a class="quick-card gold" href="palabras.html"><span>📖</span><strong>Palabras</strong></a>
+          <a class="quick-card orange" href="escucha.html"><span>🎧</span><strong>Escucha</strong></a>
+          <a class="quick-card sand" href="cultura.html"><span>🧺</span><strong>cultura</strong></a>
+        </div>
+      </section>
+      <section class="section-block">
+        <div class="section-heading"><span>🌞</span><h2>Palabra del día</h2></div>
+        <article class="word-day-card">
+          <div>
+            <div class="word-title-row"><h2>Xaume</h2><button id="wordDayAudio" class="mini-audio" type="button" data-audio="audios/frases/XAUME.mp3" aria-label="Escuchar Xaume">🔊</button></div>
+            <strong>¡Buenos días!</strong>
+            <div class="accent-line"></div>
+            <p>Buenos días.</p>
+          </div>
+          <div class="word-art" aria-hidden="1">👋🏼</div>
+        </article><br>
+        <article class="word-day-card">
+          <div>
+            <div class="word-title-row"><h2>Chapié</h2><button id="wordDayAudio1" class="mini-audio" type="button" data-audio="audios/Chapie2.mp3" aria-label="Escuchar Chapié">🔊</button></div>
+            <strong>Gracias</strong>
+            <div class="accent-line"></div>
+            <p>Gratitud, acción y efecto de agradecer.</p>
+          </div>
+          <div class="word-art" aria-hidden="2">☺️</div>
+        </article><br>
+        <article class="word-day-card">
+          <div>
+            <div class="word-title-row"><h2>Arukibo</h2><button id="wordDayAudio2" class="mini-audio" type="button" data-audio="audios/Arukibo.mp3" aria-label="Escuchar Arukibo">🔊</button></div>
+            <strong>Pariente</strong>
+            <div class="accent-line"></div>
+            <p>Pariente.</p>
+          </div>
+          <div class="word-art" aria-hidden="3">🫂</div>
+        </article>
+      </section>
+    </main>
+    <footer><p>Aprender · Escuchar · Compartir · Preservar</p></footer>
+  </div>
+</body>
+</html>

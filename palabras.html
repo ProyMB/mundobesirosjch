@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Bésiro | Palabras</title>
+  <link rel="stylesheet" href="css/palabras.css">
+  <script src="js/palabras.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="culture-header light-header">
+      <button class="back-button" id="backButton" type="button" aria-label="Volver al inicio">←</button>
+      <div class="header-copy"><h1>Palabras <span>📖</span></h1><p>Descubre nuevas palabras en bésiro<br>y conoce su significado.</p></div>
+      <div class="header-art" aria-hidden="true">🌿🦜</div>
+    </header>
+    <main class="content">
+      <section class="search-row">
+        <div class="search-wrap"><label for="searchInput">Buscar palabra</label><input id="searchInput" type="search" placeholder="Buscar palabra en bésiro..." autocomplete="off"></div>
+        <button class="filter-button" id="filterButton" type="button">⚱️ Filtrar</button>
+      </section>
+      <section>
+        <div class="section-title-row"><div><span>🌿</span><div><h2>Categorías</h2><p>Explora palabras por temas.</p></div></div></div>
+        <div class="category-strip" id="categoryStrip">
+          <button class="category-card selected" type="button" data-category="Todos"><span>🌎</span><strong>Todos</strong><small>162 palabras</small></button>
+          <button class="category-card" type="button" data-category="Naturaleza"><span>🌿</span><strong>Naturaleza</strong><small>15 palabras</small></button>
+          <button class="category-card" type="button" data-category="Familia"><span>🏠</span><strong>Familia</strong><small>23 palabras</small></button>
+          <button class="category-card" type="button" data-category="Cultura"><span>🧺</span><strong>Cultura</strong><small>9 palabras</small></button>
+          <button class="category-card" type="button" data-category="Frutas y Verduras"><span>🍓🫑</span><strong>Frutas y Verduras</strong><small>8 palabras</small></button>
+          <button class="category-card" type="button" data-category="El Tiempo"><span>⏳</span><strong>El tiempo</strong><small>12 palabras</small></button>
+          <button class="category-card" type="button" data-category="Emociones"><span>🎭</span><strong>Emociones</strong><small>13 palabras</small></button>
+          <button class="category-card" type="button" data-category="Saludos Para Hombres"><span>👋🏼👱🏼‍♂️</span><strong>Saludos Para Hombres</strong><small>14 palabras</small></button>
+          <button class="category-card" type="button" data-category="Saludos Para Mujeres"><span>👋🏼👩🏼</span><strong>Saludos Para Mujeres</strong><small>13 palabras</small></button>
+          <button class="category-card" type="button" data-category="Colores"><span>🎨</span><strong>Colores</strong><small>6 palabras</small></button>
+          <button class="category-card" type="button" data-category="Animales"><span>🐾</span><strong>Animales</strong><small>23 palabras</small></button>
+          <button class="category-card" type="button" data-category="Números"><span>🔢</span><strong>Números</strong><small>10 palabras</small></button>
+          <button class="category-card" type="button" data-category="Partes del Cuerpo"><span>👀💪</span><strong>Partes del Cuerpo</strong><small>16 palabras</small></button>
+        </div>
+      </section>
+      <section class="featured-section">
+        <div class="section-title-row"><div><span>⭐</span><div><h2>Palabras destacadas</h2><p>Aprende palabras útiles para tu día a día.</p></div></div><button class="text-button" id="showAllWords" type="button"></button></div>
+        <div class="word-grid" id="wordGrid">
+          <article class="word-card" data-category="Naturaleza" data-search="kix tierra suelo naturaleza">
+            <div class="word-icon">🌱</div><h3>Kix</h3><small></small><p>Tierra</p><button class="word-audio" type="button" data-audio="audios/Kix.mp3" aria-label="Escuchar Kix">🔊</button><div class="card-line green"></div>
+          </article>
+          <article class="word-card" data-category="Naturaleza" data-search="tux agua naturaleza">
+            <div class="word-icon">💧</div><h3>Tux</h3><small></small><p>Agua</p><button class="word-audio" type="button" data-audio="audios/Tux.mp3" aria-label="Escuchar Tux">🔊</button><div class="card-line green"></div>
+          </article>
+          <article class="word-card" data-category="Naturaleza" data-search="soes arbol naturaleza">
+            <div class="word-icon">🌳</div><h3>Soes</h3><small></small><p>Arbol</p><button class="word-audio" type="button" data-audio="audios/Soes.mp3" aria-label="Escuchar Soes">🔊</button><div class="card-line green"></div>
+          </article>
+          <article class="word-card" data-category="Naturaleza" data-search="pees fuego  naturaleza">
+            <div class="word-icon">🔥</div><h3>Pees</h3><small></small><p>Fuego</p><button class="word-audio" type="button" data-audio="audios/Pees.mp3" aria-label="Escuchar ">🔊</button><div class="card-line green"></div>
+          </article>
+          <article class="word-card" data-category="Naturaleza" data-search="montaña Yirityúx naturaleza">
+            <div class="word-icon">⛰️</div><h3>Yirityúx</h3><small></small><p>Montaña</p><button class="word-audio" type="button" data-audio="audios/Yirityux.mp3" aria-label="Escuchar Yirityúx">🔊</button><div class="card-line green"></div>
+          </article>
+          <article class="word-card" data-category="Naturaleza" data-search="cielo napés naturaleza">
+            <div class="word-icon">🌥️</div><h3>Napés</h3><small></small><p>Cielo</p><button class="word-audio" type="button" data-audio="audios/Napes.mp3" aria-label="Escuchar Napés">🔊</button><div class="card-line green"></div>
+          </article>
+          <article class="word-card" data-category="Naturaleza" data-search="fauna numukiánka naturaleza">
+            <div class="word-icon">🦜</div><h3>Numukiánka</h3><small></small><p>Fauna</p><button class="word-audio" type="button" data-audio="audios/Numukianka.mp3" aria-label="Escuchar Numukiánka">🔊</button><div class="card-line green"></div>
+          </article>
+          <article class="word-card" data-category="Naturaleza" data-search="flor pisióx naturaleza">
+            <div class="word-icon">🌸</div><h3>Pisióx</h3><small></small><p>Flor</p><button class="word-audio" type="button" data-audio="audios/Pisiox.mp3" aria-label="Escuchar Pisióx">🔊</button><div class="card-line green"></div>
+          </article>
+          <article class="word-card" data-category="Naturaleza" data-search="hoja nasusix naturaleza">
+            <div class="word-icon">🍃</div><h3>Nasusix</h3><small></small><p>Hoja</p><button class="word-audio" type="button" data-audio="audios/Nasuxis.mp3" aria-label="Escuchar Nasusix">🔊</button><div class="card-line green"></div>
+          </article>
+          <article class="word-card" data-category="Naturaleza" data-search="hielo tayo tux naturaleza">
+            <div class="word-icon">🧊</div><h3>Tayo Tux </h3><small></small><p>Hielo</p><button class="word-audio" type="button" data-audio="audios/Tayo Tux.mp3" aria-label="Escuchar Tayo Tux">🔊</button><div class="card-line green"></div>
+          </article>
+          <article class="word-card" data-category="Naturaleza" data-search="piedra kanx naturaleza">
+            <div class="word-icon">🪨</div><h3>Kanx</h3><small></small><p>Piedra</p><button class="word-audio" type="button" data-audio="audios/Kanx.mp3" aria-label="Escuchar Kanx">🔊</button><div class="card-line green"></div>
+          </article>
+          <article class="word-card" data-category="Naturaleza" data-search="hierba naxchópiro naturaleza">
+            <div class="word-icon">🌿</div><h3>Naxchópiro</h3><small></small><p>Hierba</p><button class="word-audio" type="button" data-audio="audios/Naxchopiro.mp3" aria-label="Escuchar Naxchópiro">🔊</button><div class="card-line green"></div>
+          </article>
+          <article class="word-card" data-category="Naturaleza" data-search="raiz xhanakáx naturaleza">
+            <div class="word-icon">🪴</div><h3>Xhanakáx</h3><small></small><p>Raiz</p><button class="word-audio" type="button" data-audio="audios/Xhanakax.mp3" aria-label="Escuchar Xhanakáx">🔊</button><div class="card-line green"></div>
+          </article>
+          <article class="word-card" data-category="Naturaleza" data-search="selva niúnx naturaleza">
+            <div class="word-icon">🌴</div><h3>Niúnx</h3><small></small><p>Selva</p><button class="word-audio" type="button" data-audio="audios/Niunx.mp3" aria-label="Escuchar Niúnx">🔊</button><div class="card-line green"></div>
+          </article>
+          <article class="word-card" data-category="Naturaleza" data-search="semilla niyo naturaleza">
+            <div class="word-icon">🫘</div><h3>Niyo</h3><small></small><p>Semilla</p><button class="word-audio" type="button" data-audio="audios/Niyo.mp3" aria-label="Escuchar Niyo">🔊</button><div class="card-line green"></div>
+          </article>
+          <article class="word-card" data-category="Familia" data-search="casa pox familia">
+            <div class="word-icon">🏠</div><h3>Pox</h3><small></small><p>Casa</p><button class="word-audio" type="button" data-audio="audios/pox.mp3" aria-label="Escuchar Pox">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Familia" data-search="madre paix familia">
+            <div class="word-icon">👩🏻‍🦰</div><h3>Paix</h3><small></small><p>Madre</p><button class="word-audio" type="button" data-audio="audios/paix.mp3" aria-label="Escuchar Paix">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Familia" data-search="padre axti familia">
+            <div class="word-icon">👨🏻‍🦰</div><h3>Axti</h3><small></small><p>Padre</p><button class="word-audio" type="button" data-audio="audios/axti.mp3" aria-label="Escuchar Axti">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Familia" data-search="madrastra paix axina familia">
+            <div class="word-icon">👩🏻‍🦳</div><h3>Paix Axina</h3><small></small><p>Madrastra</p><button class="word-audio" type="button" data-audio="audios/Paix Axima.mp3" aria-label="Escuchar Paix Axina">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Familia" data-search="padrastro axti naki familia">
+            <div class="word-icon">👨🏻‍🦳</div><h3>Axti Naki</h3><small></small><p>Padrastro</p><button class="word-audio" type="button" data-audio="audios/axti naki.mp3" aria-label="Escuchar Axti Naki">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Familia" data-search="tía piaki familia">
+            <div class="word-icon">👩🏼</div><h3>Piaki</h3><small></small><p>Tía</p><button class="word-audio" type="button" data-audio="audios/piaki.mp3" aria-label="Escuchar Piaki">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Familia" data-search="tío yobo familia">
+            <div class="word-icon">🧔🏼‍♂️</div><h3>Yobo</h3><small></small><p>Tío</p><button class="word-audio" type="button" data-audio="audios/yobo.mp3" aria-label="Escuchar Yobo">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Familia" data-search="abuela kiasi familia">
+            <div class="word-icon">👵🏼</div><h3>Kiasi</h3><small></small><p>Abuela</p><button class="word-audio" type="button" data-audio="audios/kiasi.mp3" aria-label="Escuchar Kiasi">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Familia" data-search="abuelo íñuma familia">
+            <div class="word-icon">👴🏼</div><h3>Iñuma</h3><small></small><p>Abuelo</p><button class="word-audio" type="button" data-audio="audios/Iñuma.mp3" aria-label="Escuchar Iñuma">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Familia" data-search="pareja kutakikíxh familia">
+            <div class="word-icon">🧑🏼‍❤️‍👩🏼</div><h3>Kutakikíxh</h3><small></small><p>Pareja</p><button class="word-audio" type="button" data-audio="audios/kutakikíxh.mp3" aria-label="Escuchar Kutakikíxh">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Familia" data-search="novio(a) axibama familia">
+            <div class="word-icon">🧑🏼‍❤️‍💋‍👩🏼</div><h3>Axibama</h3><small></small><p>Novio/a</p><button class="word-audio" type="button" data-audio="audios/axibama.mp3" aria-label="Escuchar Axibama">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Familia" data-search="yerno kiamoníxh familia">
+            <div class="word-icon">🧑🏼‍🦲</div><h3>kiamoníxh</h3><small></small><p>Yerno</p><button class="word-audio" type="button" data-audio="audios/kiamoníxh.mp3" aria-label="Escuchar Kiamoníxh">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Familia" data-search="nuera kupitikúx familia">
+            <div class="word-icon">👩🏼</div><h3>Kupikitux</h3><small></small><p>Nuera</p><button class="word-audio" type="button" data-audio="audios/Kupikitux.mp3" aria-label="Escuchar Kupikitúx">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Familia" data-search="marido ikianáx familia">
+            <div class="word-icon">🧔🏼</div><h3>Ikianáx</h3><small></small><p>Marido</p><button class="word-audio" type="button" data-audio="audios/ikianáx.mp3" aria-label="Escuchar Ikianáx">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Familia" data-search="amigo tyurapáx familia">
+            <div class="word-icon">🧑🏼‍🦰</div><h3>Tyurapáx</h3><small></small><p>Amigo</p><button class="word-audio" type="button" data-audio="audios/tyurapáx.mp3" aria-label="Escuchar Tyurapáx">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Familia" data-search="bebé kuxanáx familia">
+            <div class="word-icon">👶🏼</div><h3>Kuxanáx</h3><small></small><p>Bebé</p><button class="word-audio" type="button" data-audio="audios/kuxanáx.mp3" aria-label="Escuchar Kuxanáx">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Familia" data-search="hijo aibosíxh familia">
+            <div class="word-icon">👦🏼</div><h3>Aibosíxh</h3><small></small><p>Hijo</p><button class="word-audio" type="button" data-audio="audios/aibosíxh.mp3" aria-label="Escuchar Aibosíxh">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Familia" data-search="hija takiumukux familia">
+            <div class="word-icon">👧🏼</div><h3>Takiumukux</h3><small></small><p>Hija</p><button class="word-audio" type="button" data-audio="audios/takiumukux.mp3" aria-label="Escuchar Takiumukux">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Familia" data-search="hermano arukíxh familia">
+            <div class="word-icon">🧔🏻</div><h3>Arukíxh</h3><small></small><p>Hermano</p><button class="word-audio" type="button" data-audio="audios/arukíxh.mp3" aria-label="Escuchar Arukíxh">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Familia" data-search="jovén yaix familia">
+            <div class="word-icon">👨🏼</div><h3>Yaix</h3><small></small><p>Jovén</p><button class="word-audio" type="button" data-audio="audios/yaix.mp3" aria-label="Escuchar Yaix">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Familia" data-search="niño/a ñaima familia">
+            <div class="word-icon">👦🏻👧🏻</div><h3>Ñaima</h3><small></small><p>Niño/a</p><button class="word-audio" type="button" data-audio="audios/ñaima.mp3" aria-label="Escuchar Ñaima">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Familia" data-search="nieto/a aibosixhimia familia">
+            <div class="word-icon">👩🏻‍🦲👩🏻</div><h3>Aibosixhimia</h3><small></small><p>Nieto/a</p><button class="word-audio" type="button" data-audio="audios/aibosixhimia.mp3" aria-label="Escuchar Aibosixhimia">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Familia" data-search="primo/a isarukibo familia">
+            <div class="word-icon">🧑🏽‍🦱👧🏽</div><h3>Isarukibo</h3><small></small><p>Primo/a</p><button class="word-audio" type="button" data-audio="audios/isarukibo.mp3" aria-label="Escuchar Isarukibo">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Cultura" data-search="totaí tutáixh cultura">
+            <div class="word-icon">🌴</div><h3>Tutáixh</h3><small></small><p>Totaí</p><button class="word-audio" type="button" data-audio="audios/tutáixh.mp3" aria-label="Escuchar Tutáixh">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Cultura" data-search="yeta chikoñonáumpi cultura">
+            <div class="word-icon">😬</div><h3>Chikoñonáumpi</h3><small></small><p>Yeta</p><button class="word-audio" type="button" data-audio="audios/chikoñonau.mp3" aria-label="Escuchar Chikoñonáumpi">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Cultura" data-search="urucú  kibox cultura">
+            <div class="word-icon">🌶️🔴</div><h3>Kibox</h3><small></small><p>Urucú</p><button class="word-audio" type="button" data-audio="audios/kibox.mp3" aria-label="Escuchar Kibox">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Cultura" data-search="turere soes notenénema  cultura">
+            <div class="word-icon">🫐</div><h3>Soes Notenénema</h3><small></small><p>Turere</p><button class="word-audio" type="button" data-audio="audios/soes notenénema.mp3" aria-label="Escuchar Soes Notenénema">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Cultura" data-search="tutuma tyasoés  cultura">
+            <div class="word-icon">🥥</div><h3>Tyasoés</h3><small></small><p>Tutuma</p><button class="word-audio" type="button" data-audio="audios/tyasoés.mp3" aria-label="Escuchar Tyasoés">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Cultura" data-search="toborochi Toskokix  cultura">
+            <div class="word-icon">🌳</div><h3>Toskokix</h3><small></small><p>Toborochi</p><button class="word-audio" type="button" data-audio="audios/toskokix.mp3" aria-label="Escuchar Toskokix">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Cultura" data-search="tipoy Naibi paix cultura">
+            <div class="word-icon">👗</div><h3>Naibi Paix</h3><small></small><p>Tipoy</p><button class="word-audio" type="button" data-audio="audios/naibi paix.mp3" aria-label="Escuchar Naibi Paix">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Cultura" data-search="tátú Nutakónx cultura">
+            <div class="word-icon">🦔</div><h3>Nutakónx</h3><small></small><p>Tatú</p><button class="word-audio" type="button" data-audio="audios/nutakónx.mp3" aria-label="Escuchar Nutakónx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Cultura" data-search="tamal tusiankáx cultura">
+            <div class="word-icon">🫔</div><h3>Tusiankáx</h3><small></small><p>Tamal</p><button class="word-audio" type="button" data-audio="audios/tusiankáx.mp3" aria-label="Escuchar Tusiankáx">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Frutas y Verduras" data-search="Banana Pukúx frutas y verduras">
+            <div class="word-icon">🍌</div><h3>Pukúx</h3><small></small><p>Banana</p><button class="word-audio" type="button" data-audio="audios/pukúx.mp3" aria-label="Escuchar Pukúx">🔊</button><div class="card-line gold"></div> 
+          </article>
+           <article class="word-card" data-category="Frutas y Verduras" data-search="Limón Nermónixh frutas y verduras">
+            <div class="word-icon">🍋</div><h3>Nermónixh</h3><small></small><p>Limón</p><button class="word-audio" type="button" data-audio="audios/nermónixh.mp3" aria-label="Escuchar Nermónixh">🔊</button><div class="card-line gold"></div> 
+          </article>
+           <article class="word-card" data-category="Frutas y Verduras" data-search="Mangó Nisix frutas y verduras">
+            <div class="word-icon">🥭</div><h3>Nisix</h3><small></small><p>Mangó</p><button class="word-audio" type="button" data-audio="audios/nisix.mp3" aria-label="Escuchar Nisix">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Frutas y Verduras" data-search="Sandía Sántia frutas y verduras">
+            <div class="word-icon">🍉</div><h3>Sántia</h3><small></small><p>Sandia</p><button class="word-audio" type="button" data-audio="audios/sántia.mp3" aria-label="Escuchar Sántia">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Frutas y Verduras" data-search="Ají naríxh frutas y verduras">
+            <div class="word-icon">🌶️</div><h3>Naríxh</h3><small></small><p>Ají</p><button class="word-audio" type="button" data-audio="audios/naríxh.mp3" aria-label="Escuchar Naríxh">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Frutas y Verduras" data-search="ajo soés nukitukíxh frutas y verduras">
+            <div class="word-icon">🧄</div><h3>Nukitukíxh</h3><small></small><p>Ajo</p><button class="word-audio" type="button" data-audio="audios/nukitukíxh.mp3" aria-label="Escuchar Nukitukíxh">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Frutas y Verduras" data-search="Choclo Nosibíx frutas y verduras">
+            <div class="word-icon">🌽</div><h3>Nosibíx</h3><small></small><p>Choclo</p><button class="word-audio" type="button" data-audio="audios/Nosibíx.mp3" aria-label="Escuchar Nosibíx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Frutas y Verduras" data-search="almendra soes nokimoníxh frutas y verduras">
+            <div class="word-icon">🍠</div><h3>Soes Nokimoníxh</h3><small></small><p>Almendra</p><button class="word-audio" type="button" data-audio="audios/soes nokimoníxh.mp3" aria-label="Escuchar Nokimoníxh">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="El Tiempo" data-search="anochecer aibapáe itóbi el tiempo">
+            <div class="word-icon">🌃</div><h3>Aibapáe Itóbi</h3><small></small><p>Anochecer</p><button class="word-audio" type="button" data-audio="audios/aibapáe itóbi.mp3" aria-label="Escuchar Aibapáe Itóbi">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="El Tiempo" data-search="anoche nitóba el tiempo">
+            <div class="word-icon">🌚</div><h3>Nitóba</h3><small></small><p>Anoche</p><button class="word-audio" type="button" data-audio="audios/nitóba.mp3" aria-label="Escuchar Nitóba">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="El Tiempo" data-search="día nanenes el tiempo">
+            <div class="word-icon">🌤️</div><h3>Nanenes</h3><small></small><p>Día</p><button class="word-audio" type="button" data-audio="audios/nanenes.mp3" aria-label="Escuchar Nanenes">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="El Tiempo" data-search="ayer timika el tiempo">
+            <div class="word-icon">📆⏪</div><h3>Timika</h3><small></small><p>Ayer</p><button class="word-audio" type="button" data-audio="audios/timika.mp3" aria-label="Escuchar Timika">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="El Tiempo" data-search="año nasikibés el tiempo">
+            <div class="word-icon">📅</div><h3>Nasikibés</h3><small></small><p>Año</p><button class="word-audio" type="button" data-audio="audios/nasikibés.mp3" aria-label="Escuchar Nasikibés">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="El Tiempo" data-search="después kaimainki el tiempo">
+            <div class="word-icon">➡️</div><h3>Kaimainki</h3><small></small><p>Después</p><button class="word-audio" type="button" data-audio="audios/kaimainki.mp3" aria-label="Escuchar Kaimainki">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="El Tiempo" data-search="despertar sitopinakáx el tiempo">
+            <div class="word-icon">🥱</div><h3>Sitopinakáx</h3><small></small><p>Despertar</p><button class="word-audio" type="button" data-audio="audios/sitopinakáx.mp3" aria-label="Escuchar Sitopinakáx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="El Tiempo" data-search="domingo tomínko el tiempo">
+            <div class="word-icon">🏖️</div><h3>Tomínko</h3><small></small><p>Domingo</p><button class="word-audio" type="button" data-audio="audios/tomínko.mp3" aria-label="Escuchar Tomínko">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="El Tiempo" data-search="feriado nanenes auche ane el tiempo">
+            <div class="word-icon">🍻</div><h3>Nanenes Auche Ane</h3><small></small><p>Feriado</p><button class="word-audio" type="button" data-audio="audios/nanenes auche ane.mp3" aria-label="Escuchar Nanenes Auche Ane">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="El Tiempo" data-search="eterno ñemonkóx el tiempo">
+            <div class="word-icon">♾️</div><h3>Ñemonkóx</h3><small></small><p>Eterno</p><button class="word-audio" type="button" data-audio="audios/ñemonkóx.mp3" aria-label="Escuchar Ñemonkóx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="El Tiempo" data-search="fin tyakirúx el tiempo">
+            <div class="word-icon">🔚</div><h3>Tyakirúx</h3><small></small><p>Fin</p><button class="word-audio" type="button" data-audio="audios/Fin.mp3" aria-label="Escuchar Tyakirúx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="El Tiempo" data-search="futuro axina kuabotiki el tiempo">
+            <div class="word-icon">🕰️</div><h3>Kuabotiki</h3><small></small><p>Futuro</p><button class="word-audio" type="button" data-audio="audios/kuabotiki.mp3" aria-label="Escuchar Kuabotiki">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Emociones" data-search="extrañar  emakiyaukúx emociones">
+            <div class="word-icon">🥹</div><h3>Emakiyaukúx</h3><small></small><p>Extrañar</p><button class="word-audio" type="button" data-audio="audios/emakiyaukúx.mp3" aria-label="Escuchar Emakiyaukúx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Emociones" data-search="felicidad emociones">
+            <div class="word-icon">😀</div><h3>Axina Nuxiántimo</h3><small></small><p>Felicidad</p><button class="word-audio" type="button" data-audio="audios/Felicidad.mp3" aria-label="Escuchar Axina Nuxiántimo">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Emociones" data-search="fatiga kutarabekíxh emociones">
+            <div class="word-icon">😩</div><h3>Kutarabekíxh</h3><small></small><p>Fatiga</p><button class="word-audio" type="button" data-audio="audios/kutarabekíxh.mp3" aria-label="Escuchar Kutarabekíxh">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Emociones" data-search="gritar toxibikíxh emociones">
+            <div class="word-icon">🗣️</div><h3>Toxibikíxh</h3><small></small><p>Gritar</p><button class="word-audio" type="button" data-audio="audios/toxibikíxh.mp3" aria-label="Escuchar Toxibikíxh">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Emociones" data-search="gustar axina uxia oemo emociones">
+            <div class="word-icon">😻</div><h3>Axina Uxia Oemo</h3><small></small><p>Gustar</p><button class="word-audio" type="button" data-audio="audios/axina uxia oemo.mp3" aria-label="Escuchar Axina Uxia Oemo">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Emociones" data-search="impaciencia kutarabekíxh emociones">
+            <div class="word-icon">😤</div><h3>Kutarabekíxh</h3><small></small><p>Impaciencia</p><button class="word-audio" type="button" data-audio="audios/kutarabekíxh.mp3" aria-label="Escuchar Kutarabekíxh">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Emociones" data-search=" malestar axina chuxianpi emociones">
+            <div class="word-icon">🤒</div><h3>Axina Chuxianpi</h3><small></small><p>Malestar</p><button class="word-audio" type="button" data-audio="audios/axina chuxianpi.mp3" aria-label="Escuchar Emakiyaukúx">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Emociones" data-search="pánico tarukapae emociones">
+            <div class="word-icon">😰</div><h3>Tarukapae</h3><small></small><p>Pánico</p><button class="word-audio" type="button" data-audio="audios/tarukapae.mp3" aria-label="Escuchar Tarukapae">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Emociones" data-search="placer pukinunkúx emociones">
+            <div class="word-icon">🫦</div><h3>Pukinunkúx</h3><small></small><p>Placer</p><button class="word-audio" type="button" data-audio="audios/Placer.mp3" aria-label="Escuchar Pukinunkúx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Emociones" data-search="vacio chanpi ane au emociones">
+            <div class="word-icon">🫗</div><h3>Chanpi Ane Au</h3><small></small><p>Vacio</p><button class="word-audio" type="button" data-audio="audios/chanpi ane au.mp3" aria-label="Escuchar Chanpi Ane Au">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Emociones" data-search="tímido  axti naki kisobatiataiemociones">
+            <div class="word-icon">😳</div><h3>Axti Naki Kisobotiatai</h3><small></small><p>Tímido</p><button class="word-audio" type="button" data-audio="audios/Timido.mp3" aria-label="Escuchar Axti Naki Kisobotiatai">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Emociones" data-search="sufrir takixirikíx emociones">
+            <div class="word-icon">😢</div><h3>Takixirikíx</h3><small></small><p>Sufrir</p><button class="word-audio" type="button" data-audio="audios/takixirikíx.mp3" aria-label="Escuchar Takixirikíx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Emociones" data-search="soledad Kunauntañá emociones">
+            <div class="word-icon">👤</div><h3>Kunauntañá</h3><small></small><p>Soledad</p><button class="word-audio" type="button" data-audio="audios/Kunauntañá.mp3" aria-label="Escuchar Kunauntañá">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Saludos Para Hombres" data-search="buenos días chamuxaume saludos para hombres">
+            <div class="word-icon">☺️</div><h3>Chamuxaume</h3><small></small><p>Buenos días</p><button class="word-audio" type="button" data-audio="audios/buenos dias.mp3" aria-label="Escuchar Chamuxaume">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Saludos Para Hombres" data-search="saludo de contestación chamuxia saludos para hombres">
+            <div class="word-icon">😄</div><h3>Chamuxia</h3><small></small><p>Respuesta</p><button class="word-audio" type="button" data-audio="audios/Chamuxia.mp3" aria-label="Escuchar Chamuxia">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Saludos Para Hombres" data-search="buenos días abuelo chamuxaume iñuma saludos para hombres">
+            <div class="word-icon">👨🏼‍🦳</div><h3>Chamuxaume Iñuma</h3><small></small><p>Buenos días Abuelo</p><button class="word-audio" type="button" data-audio="audios/Chamuxaume Iñuma.mp3" aria-label="Escuchar Chamuxaume Iñuma">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Saludos Para Hombres" data-search="buenos días abuela chamuxaume piakiso saludos para hombres">
+            <div class="word-icon">👩🏼‍🦳</div><h3>Chamuxaume Piakiso</h3><small></small><p>Buenos días Abuela</p><button class="word-audio" type="button" data-audio="audios/buenos dias abuela.mp3" aria-label="Escuchar Chamuxaume Piakiso">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Saludos Para Hombres" data-search="buenos días abuela chamuxaume piaki saludos para hombres">
+            <div class="word-icon">👩🏼‍🦰</div><h3>Chamuxaume Piaki</h3><small></small><p>Buenos días Mamá</p><button class="word-audio" type="button" data-audio="audios/Chamuxaume Piaki.mp3" aria-label="Escuchar Chamuxaume Piaki">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Saludos Para Hombres" data-search="buenos días papá chamuxaume iyai saludos para hombres">
+            <div class="word-icon">👨🏼‍🦰</div><h3>Chamuxaume Iyai</h3><small></small><p>Buenos días Papá</p><button class="word-audio" type="button" data-audio="audios/Chamuxaume Iyai.mp3" aria-label="Escuchar Chamuxaume Iyai">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Saludos Para Hombres" data-search="buenos días hermana chamuxaume nikiasi saludos para hombres">
+            <div class="word-icon">👩🏼‍🦱</div><h3>Chamuxaume Nikiasi</h3><small></small><p>Buenos días Hermana</p><button class="word-audio" type="button" data-audio="audios/Chamuxaume Nikiasi.mp3" aria-label="Escuchar Chamuxaume Nikiasi">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Saludos Para Hombres" data-search="buenos días hermano chamuxaume saruki saludos para hombres">
+            <div class="word-icon">🧑🏼‍🦱</div><h3>Chamuxaume Saruki</h3><small></small><p>Buenos días Hermano</p><button class="word-audio" type="button" data-audio="audios/Chamuxaume Saruki.mp3" aria-label="Escuchar Chamuxaume Saruki">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Saludos Para Hombres" data-search="buenos días niño chamuxaume ñaima saludos para hombres">
+            <div class="word-icon">👦🏼</div><h3>Chamuxaume Ñaima</h3><small></small><p>Buenos días Niño</p><button class="word-audio" type="button" data-audio="audios/Chamuxaume Ñaima.mp3" aria-label="Escuchar Chamuxaume Ñaima">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Saludos Para Hombres" data-search="buenos días niña chamuxaume kupikimia saludos para hombres">
+            <div class="word-icon">👧🏼</div><h3>Chamuxaume Kupikimia</h3><small></small><p>Buenos días Niña</p><button class="word-audio" type="button" data-audio="audios/Chamuxaume Kupikimia.mp3" aria-label="Escuchar Chamuxaume Kupikimia">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Saludos Para Hombres" data-search="buenos días profesor/a chamuxaume ñanunekax saludos para hombres">
+            <div class="word-icon">👨🏼‍🏫</div><h3>Chamuxaume Ñanunekax</h3><small></small><p>Buenos días Profesor/a</p><button class="word-audio" type="button" data-audio="audios/Chamuxaume Ñanunekas.mp3" aria-label="Escuchar Chamuxaume Ñanunekax">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Saludos Para Hombres" data-search="hasta mañana tarityubaka saludos para hombres">
+            <div class="word-icon">🙌🏼</div><h3>Tarityubaka</h3><small></small><p>Hasta mañana</p><button class="word-audio" type="button" data-audio="audios/Tarityubaka.mp3" aria-label="Escuchar Tarityubaka ">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Saludos Para Hombres" data-search="adiós  ariox saludos para hombres">
+            <div class="word-icon">👋🏼</div><h3>Ariox</h3><small></small><p>Adiós</p><button class="word-audio" type="button" data-audio="audios/Ariox.mp3" aria-label="Escuchar Ariox ">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Saludos Para Hombres" data-search="gracias  chapie saludos para hombres">
+            <div class="word-icon">😊</div><h3>Chapie</h3><small></small><p>Gracias</p><button class="word-audio" type="button" data-audio="audios/Chapie.mp3" aria-label="Escuchar Chapie ">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Saludos Para Mujeres" data-search="buenos días xaume saludos para mujeres">
+            <div class="word-icon">☺️</div><h3>Xaume</h3><small></small><p>Buenos días </p><button class="word-audio" type="button" data-audio="audios/Xaume.mp3" aria-label="Escuchar Xaume ">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Saludos Para Mujeres" data-search="responden uxia saludos para mujeres">
+            <div class="word-icon">😄</div><h3>Uxia</h3><small></small><p>Responden</p><button class="word-audio" type="button" data-audio="audios/Uxia.mp3" aria-label="Escuchar Uxia ">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Saludos Para Mujeres" data-search="buenos días abuelo xaume nakari saludos para mujeres">
+            <div class="word-icon">👨🏼‍🦳</div><h3>Xaume Nakari</h3><small></small><p>Buenos días Abuelo</p><button class="word-audio" type="button" data-audio="audios/Xaume Nakari.mp3" aria-label="Escuchar Xaume Nakari ">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Saludos Para Mujeres" data-search="buenos días abuela xaume piakiso saludos para mujeres">
+            <div class="word-icon">👩🏼‍🦳</div><h3>Xaume Piakiso</h3><small></small><p>Buenos días Abuela</p><button class="word-audio" type="button" data-audio="audios/Xaume Piakiso.mp3" aria-label="Escuchar Xaume Piakiso ">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Saludos Para Mujeres" data-search="buenos días abuela xaume mama saludos para mujeres">
+            <div class="word-icon">👩🏼‍🦰</div><h3>Xaume Mama</h3><small></small><p>Buenos días Mamá</p><button class="word-audio" type="button" data-audio="audios/Xaume Mama.mp3" aria-label="Escuchar Xaume Mama ">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Saludos Para Mujeres" data-search="buenos días papá xaume nixhupu saludos para mujeres">
+            <div class="word-icon">👨🏼‍🦰</div><h3>Xaume Nixhupu</h3><small></small><p>Buenos días Papá</p><button class="word-audio" type="button" data-audio="audios/Xaume Nixhupu.mp3" aria-label="Escuchar Xaume Nixhupu ">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Saludos Para Mujeres" data-search="buenos días hermana xaume nikiasi saludos para mujeres">
+            <div class="word-icon">👩🏼‍🦱</div><h3>Xaume Nikiasi</h3><small></small><p>Buenos días Hermana</p><button class="word-audio" type="button" data-audio="audios/Xaume Niakiasi.mp3" aria-label="Escuchar Xaume Nikiasi ">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Saludos Para Mujeres" data-search="buenos días hermano xaume saruki saludos para mujeres">
+            <div class="word-icon">🧑🏼‍🦱</div><h3>Xaume Saruki</h3><small></small><p>Buenos días Hermano</p><button class="word-audio" type="button" data-audio="audios/Xaume Saruki.mp3" aria-label="Escuchar Xaume Saruki ">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Saludos Para Mujeres" data-search="buenos días niño xaume ñaima saludos para mujeres">
+            <div class="word-icon">👦🏼</div><h3>Xaume Ñaima</h3><small></small><p>Buenos días Niño</p><button class="word-audio" type="button" data-audio="audios/Xaume Ñaima.mp3" aria-label="Escuchar Xaume Ñaima ">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Saludos Para Mujeres" data-search="buenos días niña xaume kupikimia saludos para mujeres">
+            <div class="word-icon">👧🏼</div><h3>Xaume Kupikimia</h3><small></small><p>Buenos días Niña</p><button class="word-audio" type="button" data-audio="audios/Xaume Kupikimia.mp3" aria-label="Escuchar Xaume Kupikimia ">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Saludos Para Mujeres" data-search="buenos días profesor/a xaume ñanunekax saludos para mujeres">
+            <div class="word-icon">👨🏼‍🏫</div><h3>Xaume Ñanunekax</h3><small></small><p>Buenos días Profesor/a</p><button class="word-audio" type="button" data-audio="audios/Xaume Ñanunekax.mp3" aria-label="Escuchar Xaume Ñanunekax ">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Saludos Para Mujeres" data-search="adiós ariox saludos para mujeres">
+            <div class="word-icon">👋🏼</div><h3>Ariox</h3><small></small><p>Adiós</p><button class="word-audio" type="button" data-audio="audios/Ariox.mp3" aria-label="Escuchar Ariox ">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Saludos Para Mujeres" data-search="gracias chapie saludos para mujeres">
+            <div class="word-icon">😊</div><h3>Chapie</h3><small></small><p>Gracias</p><button class="word-audio" type="button" data-audio="audios/CHAPIE.mp3" aria-label="Escuchar Chapie">🔊</button><div class="card-line gold"></div>
+          </article>
+          <article class="word-card" data-category="Colores" data-search="amarillo namariyú colores">
+            <div class="word-icon">🟡</div><h3>Namariyúx</h3><small></small><p>Amarillo</p><button class="word-audio" type="button" data-audio="audios/Namariyux.mp3" aria-label="Escuchar Namariyúx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Colores" data-search="dorado nopiokóx colores">
+            <div class="word-icon">⚜️</div><h3>Nopiokóx</h3><small></small><p>Dorado</p><button class="word-audio" type="button" data-audio="audios/Nopiokox.mp3" aria-label="Escuchar Nopiokóx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Colores" data-search="esmerealda kanx taruku colores">
+            <div class="word-icon">❇️</div><h3>Kanx taruku</h3><small></small><p>Esmeralda</p><button class="word-audio" type="button" data-audio="audios/Kanx taruku.mp3" aria-label="Escuchar Kanx taruku">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Colores" data-search="blanco purusubí colores">
+            <div class="word-icon">⚪</div><h3>Purusubí</h3><small></small><p>Blanco</p><button class="word-audio" type="button" data-audio="audios/Purusubi.mp3" aria-label="Escuchar Purusubí">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Colores" data-search="negro kibisi colores">
+            <div class="word-icon">⚫</div><h3>Kibisi</h3><small></small><p>Negro</p><button class="word-audio" type="button" data-audio="audios/Kibisi.mp3" aria-label="Escuchar Kibisi">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Colores" data-search="rojo kitúriki colores">
+            <div class="word-icon">🔴</div><h3>Kitúriki</h3><small></small><p>Rojo</p><button class="word-audio" type="button" data-audio="audios/Kiturikis.mp3" aria-label="Escuchar Kitúriki">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Animales" data-search="abeja niyo nuux animales">
+            <div class="word-icon">🐝</div><h3>Niyo Nuux</h3><small></small><p>Abeja</p><button class="word-audio" type="button" data-audio="audios/Niyo Nuux.mp3" aria-label="Escuchar Niyo nu`ux">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Animales" data-search="araña nusamáx animales">
+            <div class="word-icon">🕷️</div><h3>Nusamáx</h3><small></small><p>Araña</p><button class="word-audio" type="button" data-audio="audios/Nusamax.mp3" aria-label="Escuchar Nusamáx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Animales" data-search="águila nutamonxíxh animales">
+            <div class="word-icon">🦅</div><h3>Nutamonxíxh</h3><small></small><p>Águila</p><button class="word-audio" type="button" data-audio="audios/Nutamonxixh.mp3" aria-label="Escuchar Nutamonxíxh">🔊</button><div class="card-line gold"></div> 
+          </article>
+           <article class="word-card" data-category="Animales" data-search="erizo nuetukíxh animales">
+            <div class="word-icon">🦔</div><h3>Nuetukíxh</h3><small></small><p>Erizo</p><button class="word-audio" type="button" data-audio="audios/Nuetukixh.mp3" aria-label="Escuchar Nuetukixh">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Animales" data-search="avestruz nupayarés animales">
+            <div class="word-icon">🪿</div><h3>Nupayarés</h3><small></small><p>Avestruz</p><button class="word-audio" type="button" data-audio="audios/Avestrus.mp3" aria-label="Escuchar Nupayarés">🔊</button><div class="card-line gold"></div> 
+          </article>
+           <article class="word-card" data-category="Animales" data-search="buitre paxupakíxh animales">
+            <div class="word-icon">🐦‍⬛</div><h3>Puxupakíxh</h3><small></small><p>Buitre</p><button class="word-audio" type="button" data-audio="audios/Puxupakixh.mp3" aria-label="Escuchar Puxupakíxh">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Animales" data-search="cabra nukauráx animales">
+            <div class="word-icon">🐐</div><h3>Nukauráx</h3><small></small><p>Cabra</p><button class="word-audio" type="button" data-audio="audios/Nukaurax.mp3" aria-label="Escuchar Nukauráx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Animales" data-search="caracol nuturúx animales">
+            <div class="word-icon">🐌</div><h3>Nuturúx</h3><small></small><p>Caracol</p><button class="word-audio" type="button" data-audio="audios/Nuturux.mp3" aria-label="Escuchar Nuturúx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Animales" data-search="cerdo nupauchés animales">
+            <div class="word-icon">🐖</div><h3>Nupauchés</h3><small></small><p>Cerdo</p><button class="word-audio" type="button" data-audio="audios/Nupauches.mp3" aria-label="Escuchar Nupauchés">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Animales" data-search="conejo nuiyurúx animales">
+            <div class="word-icon">🐇</div><h3>Nuiyurúx</h3><small></small><p>Conejo</p><button class="word-audio" type="button" data-audio="audios/Conejo.mp3" aria-label="Escuchar Nuiyurúx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Animales" data-search="gallo poox animales">
+            <div class="word-icon">🐓</div><h3>Poox</h3><small></small><p>Gallo</p><button class="word-audio" type="button" data-audio="audios/Poox.mp3" aria-label="Escuchar Poox">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Animales" data-search="gato nomesíxh animales">
+            <div class="word-icon">🐈</div><h3>Nomesíxh</h3><small></small><p>Gato</p><button class="word-audio" type="button" data-audio="audios/Gato.mp3" aria-label="Escuchar Nomesíxh">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Animales" data-search="gusano nikimix animales">
+            <div class="word-icon">🐛</div><h3>Nikimix</h3><small></small><p>Gusano</p><button class="word-audio" type="button" data-audio="audios/Nikimix.mp3" aria-label="Escuchar Nikimmix">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Animales" data-search="hormiga nokixiaríxh animales">
+            <div class="word-icon">🐜</div><h3>Nokixiaríxh</h3><small></small><p>Hormiga</p><button class="word-audio" type="button" data-audio="audios/Hormiga.mp3" aria-label="Escuchar Nokixiaríxh">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Animales" data-search="lagarto nokiríx animales">
+            <div class="word-icon">🦎</div><h3>Nokiríx</h3><small></small><p>Lagarto</p><button class="word-audio" type="button" data-audio="audios/Lagarto.mp3" aria-label="Escuchar Nokiríx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Animales" data-search="langosta nocherecheches animales">
+            <div class="word-icon">🦞</div><h3>Nocherecheches</h3><small></small><p>Langosta</p><button class="word-audio" type="button" data-audio="audios/Langosta.mp3" aria-label="Escuchar Nocherecheches">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Animales" data-search="león nokitirikióx animales">
+            <div class="word-icon">🦁</div><h3>Nokitirikióx</h3><small></small><p>León</p><button class="word-audio" type="button" data-audio="audios/Leon.mp3" aria-label="Escuchar Nokitirikióx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Animales" data-search="llama nonko pees animales">
+            <div class="word-icon">🦙</div><h3>Nonko Pees</h3><small></small><p>Llama</p><button class="word-audio" type="button" data-audio="audios/Nonko Pees.mp3" aria-label="Escuchar Nonko Pees">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Animales" data-search="loro nomotorix animales">
+            <div class="word-icon">🦜</div><h3>Nomotorix</h3><small></small><p>Loro</p><button class="word-audio" type="button" data-audio="audios/Nomotorix.mp3" aria-label="Escuchar Nomotorix">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Animales" data-search="mariposa nupaturíxh animales">
+            <div class="word-icon">🦋</div><h3>Nupaturíxh</h3><small></small><p>Mariposa</p><button class="word-audio" type="button" data-audio="audios/Nupaturixh.mp3" aria-label="Escuchar Nupaturíxh">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Animales" data-search="mosquito nobóx animales">
+            <div class="word-icon">🦟</div><h3>Nobóx</h3><small></small><p>Mosquito</p><button class="word-audio" type="button" data-audio="audios/Mosquito.mp3" aria-label="Escuchar Nobóx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Animales" data-search="pato tubasix animales">
+            <div class="word-icon">🦆</div><h3>Tubasix</h3><small></small><p>Pato</p><button class="word-audio" type="button" data-audio="audios/Tubasix.mp3" aria-label="Escuchar Tubasix">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Animales" data-search="perro tamokóx animales">
+            <div class="word-icon">🐕</div><h3>Tamokóx</h3><small></small><p>Perro</p><button class="word-audio" type="button" data-audio="audios/Tamokox.mp3" aria-label="Escuchar Tamokóx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Números" data-search="cero champi números">
+            <div class="word-icon">0️⃣</div><h3>Champi</h3><small></small><p>Cero</p><button class="word-audio" type="button" data-audio="audios/Champi.mp3" aria-label="Escuchar Champi">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Números" data-search="uno taman números">
+            <div class="word-icon">1️⃣</div><h3>Taman</h3><small></small><p>Uno</p><button class="word-audio" type="button" data-audio="audios/TAMAN.mp3" aria-label="Escuchar Taman">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Números" data-search="dos to números">
+            <div class="word-icon">2️⃣</div><h3>To</h3><small></small><p>Dos</p><button class="word-audio" type="button" data-audio="audios/To.mp3" aria-label="Escuchar To">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Números" data-search="tres ne números">
+            <div class="word-icon">3️⃣</div><h3>Ne</h3><small></small><p>Tres</p><button class="word-audio" type="button" data-audio="audios/Ne.mp3" aria-label="Escuchar Ne">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Números" data-search="cuatro nu números">
+            <div class="word-icon">4️⃣</div><h3>Nu</h3><small></small><p>Cuatro</p><button class="word-audio" type="button" data-audio="audios/Nu.mp3" aria-label="Escuchar Nu">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Números" data-search="cinco ma números">
+            <div class="word-icon">5️⃣</div><h3>Ma</h3><small></small><p>Cinco</p><button class="word-audio" type="button" data-audio="audios/Ma.mp3" aria-label="Escuchar Ma">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Números" data-search="seis pa números">
+            <div class="word-icon">6️⃣</div><h3>Pa</h3><small></small><p>Seis</p><button class="word-audio" type="button" data-audio="audios/Pa.mp3" aria-label="Escuchar Pa">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Números" data-search=" siete ki números">
+            <div class="word-icon">7️⃣</div><h3>Ki</h3><small></small><p>Siete</p><button class="word-audio" type="button" data-audio="audios/Ki.mp3" aria-label="Escuchar Ki">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Números" data-search="ocho mu números">
+            <div class="word-icon">8️⃣</div><h3>Mu</h3><small></small><p>Ocho</p><button class="word-audio" type="button" data-audio="audios/Mu.mp3" aria-label="Escuchar Mu">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Números" data-search="nueve ku números">
+            <div class="word-icon">9️⃣</div><h3>Ku</h3><small></small><p>Nueve</p><button class="word-audio" type="button" data-audio="audios/Ku.mp3" aria-label="Escuchar Ku">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Números" data-search="diez tu números">
+            <div class="word-icon">🔟</div><h3>Tu</h3><small></small><p>Diez</p><button class="word-audio" type="button" data-audio="audios/Tu.mp3" aria-label="Escuchar Tu">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Partes del Cuerpo" data-search="boca arúx partes del cuerpo">
+            <div class="word-icon">👄</div><h3>Arúx</h3><small></small><p>Boca</p><button class="word-audio" type="button" data-audio="audios/Arux.mp3" aria-label="Escuchar Arúx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Partes del Cuerpo" data-search="brazo ipiax partes del cuerpo">
+            <div class="word-icon">💪🏼</div><h3>Ipiax</h3><small></small><p>Brazo</p><button class="word-audio" type="button" data-audio="audios/Ipiax.mp3" aria-label="Escuchar Ipiax">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Partes del Cuerpo" data-search="cabeza taanúx partes del cuerpo">
+            <div class="word-icon">👨🏼‍🦲</div><h3>Taanúx</h3><small></small><p>Cabeza</p><button class="word-audio" type="button" data-audio="audios/Taunux.mp3" aria-label="Escuchar Taanúx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Partes del Cuerpo" data-search="cara isúx partes del cuerpo">
+            <div class="word-icon">🧔🏼‍♂️</div><h3>Isúx</h3><small></small><p>Cara</p><button class="word-audio" type="button" data-audio="audios/Isux.mp3" aria-label="Escuchar Isúx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Partes del Cuerpo" data-search="cerebro tayusíx partes del cuerpo">
+            <div class="word-icon">🧠</div><h3>Tayusíx</h3><small></small><p>Cerebro</p><button class="word-audio" type="button" data-audio="audios/Tayusix.mp3" aria-label="Escuchar Tayusíx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Partes del Cuerpo" data-search="corazón ausasíx partes del cuerpo">
+            <div class="word-icon">🫀</div><h3>Ausasíx</h3><small></small><p>Corazón</p><button class="word-audio" type="button" data-audio="audios/Ausasix.mp3" aria-label="Escuchar Ausasíx">🔊</button><div class="card-line gold"></div> 
+          </article> 
+          <article class="word-card" data-category="Partes del Cuerpo" data-search="dedo asu ees partes del cuerpo">
+            <div class="word-icon">👍🏼</div><h3>Asu Ees</h3><small></small><p>Dedo</p><button class="word-audio" type="button" data-audio="audios/Asues.mp3" aria-label="Escuchar Asu ees">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Partes del Cuerpo" data-search="diente oox partes del cuerpo">
+            <div class="word-icon">🦷</div><h3>Oox</h3><small></small><p>Diente</p><button class="word-audio" type="button" data-audio="audios/Oox.mp3" aria-label="Escuchar Oox">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Partes del Cuerpo" data-search="lenguaje utúx partes del cuerpo">
+            <div class="word-icon">👅</div><h3>Utúx</h3><small></small><p>Lengua</p><button class="word-audio" type="button" data-audio="audios/Utux.mp3" aria-label="Escuchar Utúx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Partes del Cuerpo" data-search="mano ees partes del cuerpo">
+            <div class="word-icon">✋🏼</div><h3>Ees</h3><small></small><p>Mano</p><button class="word-audio" type="button" data-audio="audios/Ees.mp3" aria-label="Escuchar Ees">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Partes del Cuerpo" data-search="nariz iñáx partes del cuerpo">
+            <div class="word-icon">👃🏼</div><h3>Iñáx</h3><small></small><p>Nariz</p><button class="word-audio" type="button" data-audio="audios/Iñaix.mp3" aria-label="Escuchar Iñáx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Partes del Cuerpo" data-search="ojo sitóx partes del cuerpo">
+            <div class="word-icon">👁️</div><h3>Sitóx</h3><small></small><p>Ojo</p><button class="word-audio" type="button" data-audio="audios/Sitox.mp3" aria-label="Escuchar Sitóx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Partes del Cuerpo" data-search="oreja umasúx partes del cuerpo">
+            <div class="word-icon">👂🏼</div><h3>Umasúx</h3><small></small><p>Oreja</p><button class="word-audio" type="button" data-audio="audios/Umasux.mp3" aria-label="Escuchar Umasúx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Partes del Cuerpo" data-search="pierna tapáx partes del cuerpo">
+            <div class="word-icon">🦵🏼</div><h3>Tapáx</h3><small></small><p>Pierna</p><button class="word-audio" type="button" data-audio="audios/Tapax.mp3" aria-label="Escuchar Tapáx">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Partes del Cuerpo" data-search="pie popés partes del cuerpo">
+            <div class="word-icon">🦶🏼</div><h3>Popés</h3><small></small><p>Pie</p><button class="word-audio" type="button" data-audio="audios/Popes.mp3" aria-label="Escuchar Popés">🔊</button><div class="card-line gold"></div> 
+          </article>
+          <article class="word-card" data-category="Partes del Cuerpo" data-search="uña kikíxh partes del cuerpo">
+            <div class="word-icon">💅🏼</div><h3>Kikíxh</h3><small></small><p>Uña</p><button class="word-audio" type="button" data-audio="audios/kikix.mp3" aria-label="Escuchar Kikíxh">🔊</button><div class="card-line gold"></div> 
+          </article>
+        </div>
+        <p class="empty-state" id="wordEmpty" hidden>No se encontraron palabras.</p>
+      </section>
+      <aside class="tip-card"><span>💡</span><div><h3>Consejo</h3><p>Repite estas palabras en voz alta, úsalas en tus conversaciones y enseña a otros. ¡Así nuestra lengua seguirá viva!</p></div><span>🌿</span></aside>
+    </main>
+  </div>
+</body>
+</html>
